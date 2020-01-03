@@ -83,10 +83,15 @@ Provides daily public dataset of all loan data that is not covered by the data p
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure OAuth2 access token for authorization: oauth2
+$config = CedricZiel\OpenAPI\BondoraPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new CedricZiel\OpenAPI\BondoraPHP\Api\ReportApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $requestLoanIds = array('requestLoanIds_example'); // string[] | Specific loans to search
 $requestCountries = array('requestCountries_example'); // string[] | Two letter iso code for country of origin: EE, ES, FI
@@ -124,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 

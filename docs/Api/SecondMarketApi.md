@@ -208,10 +208,15 @@ Gets LoanPartDetails info by identifier
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure OAuth2 access token for authorization: oauth2
+$config = CedricZiel\OpenAPI\BondoraPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new CedricZiel\OpenAPI\BondoraPHP\Api\SecondMarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = 'id_example'; // string | LoanPartDetails's identifier
 
@@ -237,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -262,10 +267,15 @@ Gets list of active secondary market items
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure OAuth2 access token for authorization: oauth2
+$config = CedricZiel\OpenAPI\BondoraPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new CedricZiel\OpenAPI\BondoraPHP\Api\SecondMarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $requestLoanIssuedDateFrom = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Loan issued start date from
 $requestLoanIssuedDateTo = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Loan issued start date to
@@ -389,7 +399,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -414,10 +424,15 @@ Get the secondary market item summary
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure OAuth2 access token for authorization: oauth2
+$config = CedricZiel\OpenAPI\BondoraPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new CedricZiel\OpenAPI\BondoraPHP\Api\SecondMarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = 'id_example'; // string | SecondaryMarket item identificator
 
@@ -443,7 +458,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -468,10 +483,15 @@ Get the secondary market item summaries in a list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure OAuth2 access token for authorization: oauth2
+$config = CedricZiel\OpenAPI\BondoraPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new CedricZiel\OpenAPI\BondoraPHP\Api\SecondMarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $request = new \CedricZiel\OpenAPI\BondoraPHP\Model\SecondMarketListingRequest(); // \CedricZiel\OpenAPI\BondoraPHP\Model\SecondMarketListingRequest | SecondaryMarket item identificators.              This endpoint supports both GET and POST methods.              If using this endpoint with the GET method the request data must be sent with the request body, even though it is a GET request.              The \"Content-Type\" header must be set so the server knows how to decode the data.
 
@@ -497,7 +517,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -522,10 +542,15 @@ Get the secondary market item summaries in a list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure OAuth2 access token for authorization: oauth2
+$config = CedricZiel\OpenAPI\BondoraPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new CedricZiel\OpenAPI\BondoraPHP\Api\SecondMarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $request = new \CedricZiel\OpenAPI\BondoraPHP\Model\SecondMarketListingRequest(); // \CedricZiel\OpenAPI\BondoraPHP\Model\SecondMarketListingRequest | SecondaryMarket item identificators.              This endpoint supports both GET and POST methods.              If using this endpoint with the GET method the request data must be sent with the request body, even though it is a GET request.              The \"Content-Type\" header must be set so the server knows how to decode the data.
 
@@ -551,7 +576,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -576,10 +601,15 @@ Gets LoanPartDetails info by identifiers in a list (up to 1000 items).
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure OAuth2 access token for authorization: oauth2
+$config = CedricZiel\OpenAPI\BondoraPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new CedricZiel\OpenAPI\BondoraPHP\Api\SecondMarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $request = new \CedricZiel\OpenAPI\BondoraPHP\Model\LoanPartDetailsRequest(); // \CedricZiel\OpenAPI\BondoraPHP\Model\LoanPartDetailsRequest | LoanPartDetails identifiers list.              This endpoint supports both GET and POST methods.              If using this endpoint with the GET method the request data must be sent with the request body, even though it is a GET request.              The \"Content-Type\" header must be set so the server knows how to decode the data.
 
@@ -605,7 +635,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -630,10 +660,15 @@ Gets LoanPartDetails info by identifiers in a list (up to 1000 items).
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure OAuth2 access token for authorization: oauth2
+$config = CedricZiel\OpenAPI\BondoraPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 $apiInstance = new CedricZiel\OpenAPI\BondoraPHP\Api\SecondMarketApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $request = new \CedricZiel\OpenAPI\BondoraPHP\Model\LoanPartDetailsRequest(); // \CedricZiel\OpenAPI\BondoraPHP\Model\LoanPartDetailsRequest | LoanPartDetails identifiers list.              This endpoint supports both GET and POST methods.              If using this endpoint with the GET method the request data must be sent with the request body, even though it is a GET request.              The \"Content-Type\" header must be set so the server knows how to decode the data.
 
@@ -659,7 +694,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../../README.md#oauth2)
 
 ### HTTP request headers
 
