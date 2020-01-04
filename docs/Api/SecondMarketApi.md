@@ -10,10 +10,8 @@ Method | HTTP request | Description
 [**secondMarketGet**](SecondMarketApi.md#secondMarketGet) | **GET** /api/v1/loanpart/{id} | Gets LoanPartDetails info by identifier
 [**secondMarketGetActive**](SecondMarketApi.md#secondMarketGetActive) | **GET** /api/v1/secondarymarket | Gets list of active secondary market items
 [**secondMarketGetItem**](SecondMarketApi.md#secondMarketGetItem) | **GET** /api/v1/secondarymarket/{id} | Get the secondary market item summary
-[**secondMarketGetItemList**](SecondMarketApi.md#secondMarketGetItemList) | **GET** /api/v1/secondarymarket/list | Get the secondary market item summaries in a list
-[**secondMarketGetItemList_0**](SecondMarketApi.md#secondMarketGetItemList_0) | **POST** /api/v1/secondarymarket/list | Get the secondary market item summaries in a list
-[**secondMarketGetList**](SecondMarketApi.md#secondMarketGetList) | **GET** /api/v1/loanpart/list | Gets LoanPartDetails info by identifiers in a list (up to 1000 items).
-[**secondMarketGetList_0**](SecondMarketApi.md#secondMarketGetList_0) | **POST** /api/v1/loanpart/list | Gets LoanPartDetails info by identifiers in a list (up to 1000 items).
+[**secondMarketGetItemList**](SecondMarketApi.md#secondMarketGetItemList) | **POST** /api/v1/secondarymarket/list | Get the secondary market item summaries in a list
+[**secondMarketGetList**](SecondMarketApi.md#secondMarketGetList) | **POST** /api/v1/loanpart/list | Gets LoanPartDetails info by identifiers in a list (up to 1000 items).
 [**secondMarketSell**](SecondMarketApi.md#secondMarketSell) | **POST** /api/v1/secondarymarket/sell | Sell your loans to secondary market.
 
 
@@ -529,65 +527,6 @@ Name | Type | Description  | Notes
 [[Back to README]](../../README.md)
 
 
-## secondMarketGetItemList_0
-
-> \CedricZiel\OpenAPI\BondoraPHP\Model\ApiResultSecondMarketItemSummaryList secondMarketGetItemList_0($request)
-
-Get the secondary market item summaries in a list
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = CedricZiel\OpenAPI\BondoraPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new CedricZiel\OpenAPI\BondoraPHP\Api\SecondMarketApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$request = new \CedricZiel\OpenAPI\BondoraPHP\Model\SecondMarketListingRequest(); // \CedricZiel\OpenAPI\BondoraPHP\Model\SecondMarketListingRequest | SecondaryMarket item identificators.              This endpoint supports both GET and POST methods.              If using this endpoint with the GET method the request data must be sent with the request body, even though it is a GET request.              The \"Content-Type\" header must be set so the server knows how to decode the data.
-
-try {
-    $result = $apiInstance->secondMarketGetItemList_0($request);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling SecondMarketApi->secondMarketGetItemList_0: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**\CedricZiel\OpenAPI\BondoraPHP\Model\SecondMarketListingRequest**](../Model/SecondMarketListingRequest.md)| SecondaryMarket item identificators.              This endpoint supports both GET and POST methods.              If using this endpoint with the GET method the request data must be sent with the request body, even though it is a GET request.              The \&quot;Content-Type\&quot; header must be set so the server knows how to decode the data. |
-
-### Return type
-
-[**\CedricZiel\OpenAPI\BondoraPHP\Model\ApiResultSecondMarketItemSummaryList**](../Model/ApiResultSecondMarketItemSummaryList.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
-- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
-- **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
-
-
 ## secondMarketGetList
 
 > \CedricZiel\OpenAPI\BondoraPHP\Model\ApiResultLoanPartDetailsList secondMarketGetList($request)
@@ -618,65 +557,6 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SecondMarketApi->secondMarketGetList: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**\CedricZiel\OpenAPI\BondoraPHP\Model\LoanPartDetailsRequest**](../Model/LoanPartDetailsRequest.md)| LoanPartDetails identifiers list.              This endpoint supports both GET and POST methods.              If using this endpoint with the GET method the request data must be sent with the request body, even though it is a GET request.              The \&quot;Content-Type\&quot; header must be set so the server knows how to decode the data. |
-
-### Return type
-
-[**\CedricZiel\OpenAPI\BondoraPHP\Model\ApiResultLoanPartDetailsList**](../Model/ApiResultLoanPartDetailsList.md)
-
-### Authorization
-
-[oauth2](../../README.md#oauth2)
-
-### HTTP request headers
-
-- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
-- **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
-
-
-## secondMarketGetList_0
-
-> \CedricZiel\OpenAPI\BondoraPHP\Model\ApiResultLoanPartDetailsList secondMarketGetList_0($request)
-
-Gets LoanPartDetails info by identifiers in a list (up to 1000 items).
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: oauth2
-$config = CedricZiel\OpenAPI\BondoraPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new CedricZiel\OpenAPI\BondoraPHP\Api\SecondMarketApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$request = new \CedricZiel\OpenAPI\BondoraPHP\Model\LoanPartDetailsRequest(); // \CedricZiel\OpenAPI\BondoraPHP\Model\LoanPartDetailsRequest | LoanPartDetails identifiers list.              This endpoint supports both GET and POST methods.              If using this endpoint with the GET method the request data must be sent with the request body, even though it is a GET request.              The \"Content-Type\" header must be set so the server knows how to decode the data.
-
-try {
-    $result = $apiInstance->secondMarketGetList_0($request);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling SecondMarketApi->secondMarketGetList_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

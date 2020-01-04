@@ -149,10 +149,8 @@ Class | Method | HTTP request | Description
 *SecondMarketApi* | [**secondMarketGet**](docs/Api/SecondMarketApi.md#secondmarketget) | **GET** /api/v1/loanpart/{id} | Gets LoanPartDetails info by identifier
 *SecondMarketApi* | [**secondMarketGetActive**](docs/Api/SecondMarketApi.md#secondmarketgetactive) | **GET** /api/v1/secondarymarket | Gets list of active secondary market items
 *SecondMarketApi* | [**secondMarketGetItem**](docs/Api/SecondMarketApi.md#secondmarketgetitem) | **GET** /api/v1/secondarymarket/{id} | Get the secondary market item summary
-*SecondMarketApi* | [**secondMarketGetItemList**](docs/Api/SecondMarketApi.md#secondmarketgetitemlist) | **GET** /api/v1/secondarymarket/list | Get the secondary market item summaries in a list
-*SecondMarketApi* | [**secondMarketGetItemList_0**](docs/Api/SecondMarketApi.md#secondmarketgetitemlist_0) | **POST** /api/v1/secondarymarket/list | Get the secondary market item summaries in a list
-*SecondMarketApi* | [**secondMarketGetList**](docs/Api/SecondMarketApi.md#secondmarketgetlist) | **GET** /api/v1/loanpart/list | Gets LoanPartDetails info by identifiers in a list (up to 1000 items).
-*SecondMarketApi* | [**secondMarketGetList_0**](docs/Api/SecondMarketApi.md#secondmarketgetlist_0) | **POST** /api/v1/loanpart/list | Gets LoanPartDetails info by identifiers in a list (up to 1000 items).
+*SecondMarketApi* | [**secondMarketGetItemList**](docs/Api/SecondMarketApi.md#secondmarketgetitemlist) | **POST** /api/v1/secondarymarket/list | Get the secondary market item summaries in a list
+*SecondMarketApi* | [**secondMarketGetList**](docs/Api/SecondMarketApi.md#secondmarketgetlist) | **POST** /api/v1/loanpart/list | Gets LoanPartDetails info by identifiers in a list (up to 1000 items).
 *SecondMarketApi* | [**secondMarketSell**](docs/Api/SecondMarketApi.md#secondmarketsell) | **POST** /api/v1/secondarymarket/sell | Sell your loans to secondary market.
 
 
